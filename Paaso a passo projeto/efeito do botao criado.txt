@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botões com Animação de Comprimento de Borda</title>
+    <style>
+        .botoes-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            height: 100vh;
+            padding-left: 20px; /* Espaço à esquerda da PÁGINA */
+        }
+
+        .botao {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 17px;
+            color: white; /* Cor da fonte */
+            background-color: black;
+            width: 200px;
+            height: 50px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            overflow: hidden;
+            border-radius: 25px;
+            margin-bottom: 20px; /* Espaço vertical entre os botões */
+            text-decoration: none; /* Remover sublinhagem */
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5); /* Sombra mais visível */
+        }
+
+        .botao:before {
+            content: "";
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 0;
+            height: 0;
+            border-top: 2px solid hwb(73 1% 4%);  /* Espessura da borda baixo do efeito do botão */
+            border-right: 2px solid rgba(253, 253, 250, 0.938);  /* Espessura da borda cima do efeito do botão */
+            animation: border-top-right 3s infinite alternate;
+        }
+
+        .botao::after {
+            content: "";
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+            width: 0;
+            height: 0;
+            border-bottom: 2px solid hwb(73 1% 4%);
+            border-left: 2px solid rgba(253, 253, 250, 0.938);
+            animation: border-bottom-left 3s infinite alternate;
+        }
+
+        @keyframes border-top-right {
+            0% { width: 0; height: 0; }
+            50% { width: 200px; height: 0px; }
+            100% { width: 200px; height: 48px; }
+        }
+
+        @keyframes border-bottom-left {
+            0% { width: 0; height: 0; }
+            50% { width: 200px; height: 0px; }
+            100% { width: 200px; height: 48px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="botoes-container">
+        <div class="botao">I.A</div>
+        <div class="botao">Front End</div>
+        <div class="botao">Back End</div>
+        <div class="botao">I O T</div>
+        <div class="botao">Redes</div>
+        <div class="botao">Machine Learning</div>
+    </div>
+</body>
+</html>

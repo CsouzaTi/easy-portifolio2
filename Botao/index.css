@@ -1,0 +1,49 @@
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: white;
+    position: relative;
+}
+
+.botao {
+    background-color: white;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.text-animation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: top left;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    animation: move-around 4s linear infinite;
+}
+
+.text-animation span {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+@keyframes move-around {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg) translateY(-100px);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg) translateY(-100px);
+    }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .button-container {
+      position: relative;
+    }
+
+    .button {
+      display: inline-block;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      outline: none; /* Remover contorno do botão */
+      transition: background 0.3s, transform 0.3s;
+      overflow: hidden;
+      position: relative;
+    }
+  
+    .button img {
+      width: 300px; /* Defina uma largura maior para a imagem */
+      height: auto; /* Mantenha a altura automática para manter a proporção original */
+      border-radius: 20%; /* Faz a imagem ficar mais redonda */
+    }
+
+    .overlay-text {
+      position: absolute;
+      top: 10px; /* Ajuste para a distância do topo */
+      left: 50%;
+      transform: translateX(-50%);
+      color: #fff;
+      font-size: 14px;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .button:hover .overlay-text {
+      opacity: 1;
+    }
+
+    .button:hover {
+      transform: scale(1.1);
+    }
+
+    .button:active {
+      transform: rotate(5deg);
+    }
+  </style>
+  <title>Botão Geração TI</title>
+</head>
+<body>
+
+  <div class="button-container">
+    <a href="https://www.youtube.com/watch?v=1EX9IJBYX60&list=PL4ITHPnJ4STiJDmDa0-pL8iZsYCQK2R6u" target="_blank" class="button primary">
+      <img src="geracao ti.jfif" alt="Ícone do Botão">
+    </a>
+    <span class="overlay-text">Sugestão para Iniciantes</span>
+  </div>
+
+</body>
+</html>
